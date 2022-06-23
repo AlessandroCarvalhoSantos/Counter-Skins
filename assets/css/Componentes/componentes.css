@@ -1,0 +1,76 @@
+/* Botão home*/
+
+.btn-effect{
+    position: relative;
+    overflow: hidden;
+    transition: 1s all ease;
+    color: #daa507 !important;
+    border: 1px solid #d4a209 !important;
+    font-weight: bolder !important;
+}
+
+.btn-effect:hover{
+    color: #585858 !important;
+
+}
+
+.btn-effect::before{
+    background: #ffc107;
+    color: rgb(255, 255, 255) !important;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 1s ease;
+}
+
+.btn4::before{
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+    
+}
+.btn4:hover::before{
+    height: 380%;
+}
+
+
+/* Efeito navlink*/
+
+
+.svg-wrapper {
+    margin-top: 0;
+    position: relative;
+    display: inline-block;
+    border-radius: 3px;
+}
+  
+  
+  #shape {
+    stroke-width: 2px;
+    fill: transparent;
+    stroke: #ebd6609d;
+    stroke-dasharray: 85 400;
+    stroke-dashoffset: -150;
+    transition: 1s all ease;
+  }
+  
+  #text {
+    margin-top: -40px;
+    text-align: center;
+  }
+  
+
+  .svg-wrapper:hover #shape {
+    stroke-dasharray: 50 0;
+    stroke-width: 2px;
+    stroke-dashoffset: 0;
+    stroke: #f5d000;
+    
+  }
+
+  .img-gradient{
+    background-color: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)) !important;
+  }

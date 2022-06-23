@@ -1,0 +1,12 @@
+/*Configuração de fonte*/
+
+@font-face {
+    font-family: 'counter-strike';
+    src: url('../fonts/cs_regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fs-cs{
+    font-family: 'counter-strike';
+}

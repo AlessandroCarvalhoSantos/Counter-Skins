@@ -1,0 +1,74 @@
+
+.full-height{
+    min-height: 100vh;
+}
+
+
+.height-75{
+    min-width: 75vh;
+}
+
+.bg-ground{
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bg-fundo{
+    background-image: url('../img/bg.svg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-fundo2{
+    background-image: url('../img/bg1.svg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-fundo3{
+    background-image: url('../img/bg2.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-dark-1{
+    background-color: #0000008e;
+}
+
+.bg-gray{
+    background-color: rgb(230, 230, 230);
+}
+
+.bg-black{
+    background-color: black;
+}
+
+.out-none{
+    outline: none;
+}
+
+.img-login{
+    background: linear-gradient(rgb(0, 0, 0),rgba(0, 0, 0, 0)), url('../img/CSGO/wp-login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-esqueceu-senha{
+    background: linear-gradient(rgb(0, 0, 0),rgba(0, 0, 0, 0.459)), url('../img/CSGO/wp-10.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+}
+
+.bg-login{
+    background-color: rgba(0, 0, 0, 0.877);
+    border-radius: 20px;
+    border: 1px solid black;
+}

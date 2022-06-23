@@ -1,0 +1,12 @@
+@import url(./Componentes/componentes.css);
+@import url(./custom.css);
+@import url(./config.css);
+@import url(./global.css);
+@import url(./responsive.css);
+
+
+
+.img-corusel{
+    width: 100%;
+    height: 100vh;
+}

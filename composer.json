@@ -1,0 +1,12 @@
+{
+    "name":"desafio/crud",
+    "require": {
+        "dg/mysql-dump": "^1.5"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Model\\":"model/"
+        }
+    }
+}

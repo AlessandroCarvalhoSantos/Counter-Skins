@@ -1,0 +1,52 @@
+{
+    "packages": [
+        {
+            "name": "dg/mysql-dump",
+            "version": "v1.5.1",
+            "version_normalized": "1.5.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dg/MySQL-dump.git",
+                "reference": "e0e287b715b43293773a8b0edf8514f606e01780"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dg/MySQL-dump/zipball/e0e287b715b43293773a8b0edf8514f606e01780",
+                "reference": "e0e287b715b43293773a8b0edf8514f606e01780",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "time": "2019-09-10T21:36:25+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "http://davidgrudl.com"
+                }
+            ],
+            "description": "MySQL database dump.",
+            "homepage": "https://github.com/dg/MySQL-dump",
+            "keywords": [
+                "mysql"
+            ],
+            "support": {
+                "source": "https://github.com/dg/MySQL-dump/tree/master"
+            },
+            "install-path": "../dg/mysql-dump"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
