@@ -46,6 +46,12 @@ if($sessionPage->isValidToken($_SESSION["token"]) && ($sessionPage->getType() ==
             WHERE id_inventario = " .$inventario[0]['id_inventario'];
 
             $connection->execute($sql)->fetchAll(PDO::FETCH_ASSOC);
+
+            $sql = 'UPDATE itens SET
+            estoque ="N"
+            WHERE id_item = ' .$_SESSION['codItem'];
+
+            $connection->execute($sql)->fetchAll(PDO::FETCH_ASSOC);
      
 
             $pageInitial->setVariablePath("../../");

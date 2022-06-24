@@ -49,7 +49,7 @@ class Pagamento{
         $obPayload = (new Payload)->setMerchantName(PIX_MERCHANT_NAME)
                     ->setMerchantCity(PIX_MERCHANT_CITY)
                     ->setAmount($response['valor']['original'])
-                    ->setTxid("***")
+                    ->setTxid($response['txid'])
                     ->setUrl($response['location'])
                     ->setUniquePayment(true);
 
