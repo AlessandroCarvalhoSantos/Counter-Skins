@@ -19,7 +19,11 @@ if($sessionPage->isValidToken($_SESSION["token"]) && ($sessionPage->getType() ==
     $connection = new ConnectionMySql;
     $connection->executeConnection();
 
-    $sql = "SELECT * FROM itens";
+    $sql = "SELECT * FROM `itens` as i
+    INNER JOIN inventario as v 
+    ON v.id_item = i.id_item
+    where v.id_usuario = " . $_SESSION['userId'];
+     
     $_SESSION['inventario'] =  $connection->execute($sql)->fetchAll(PDO::FETCH_ASSOC);
 
     $pageInitial->setVariablePath("../../");
@@ -27,6 +31,8 @@ if($sessionPage->isValidToken($_SESSION["token"]) && ($sessionPage->getType() ==
     $pageInitial->setPathPage("view/inventario/");
     $pageInitial->setNamePage("inventario", "php");
     $pageInitial->execute();
+
+    unset($_SESSION['inventario']);
 }else{
     header("location: ../login/login.php");
     exit();

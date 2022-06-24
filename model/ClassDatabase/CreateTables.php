@@ -29,6 +29,11 @@ class CreateTables{
             $this->insertItens(); 
         }
 
+        if(!in_array("inventario", $dados)){
+            $this->createTableInventario(); 
+            $this->insertInventario(); 
+        }
+
     }
 
   
@@ -52,7 +57,176 @@ class CreateTables{
         $this->connection->setTable('usuarios');
         $id=$this->connection->insert($dados);
 
+        $dados = array(
+            "nome_usuario"=> "Eduardo",
+            "sobrenome_usuario"=> "Vasconcellos Motta",
+            "cpf_usuario"=>"14527325744",
+            "senha_usuario" => "$password",
+            "saldo_usuario" => 100,
+            "email_usuario" => "dudumottavasconcelos@gmail.com",
+            "celular_usuario" => "28999145918",
+            "link_steam_usuario" => "https://steamcommunity.com/tradeoffer/new/?partner=1077846459&token=6K-MXVNX",
+            "tipo_usuario" => "U"
+        );
+
+        $id=$this->connection->insert($dados);
+
         $this->id = $id;
+    }
+
+    private function insertInventario(){
+
+        $this->connection->setTable('inventario');
+
+        $dados = array(
+            "id_item"=> 1,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
+
+        $dados = array(
+            "id_item"=> 2,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
+
+        $dados = array(
+            "id_item"=> 3,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
+
+        $dados = array(
+            "id_item"=> 4,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
+
+        $dados = array(
+            "id_item"=> 5,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
+
+        $dados = array(
+            "id_item"=> 6,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
+
+        $dados = array(
+            "id_item"=> 7,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
+
+        $dados = array(
+            "id_item"=> 8,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
+
+        $dados = array(
+            "id_item"=> 9,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
+
+        $dados = array(
+            "id_item"=> 10,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
+
+        $dados = array(
+            "id_item"=> 11,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
+
+        $dados = array(
+            "id_item"=> 12,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
+
+        $dados = array(
+            "id_item"=> 13,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
+
+        $dados = array(
+            "id_item"=> 14,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
+
+        $dados = array(
+            "id_item"=> 15,
+            "id_usuario"=> 1,
+            "status_item"=>"T",
+            "status_negociacao" => "A",
+            "preco_compra" => 0.01,
+            "preco_venda" => 0.01
+        );
+        $this->connection->insert($dados);
     }
 
     private function insertItens(){
@@ -256,7 +430,6 @@ class CreateTables{
         PRIMARY KEY (`id_usuario`)
         ) ENGINE = InnoDB;");
     }
-
     
     private function createTableItens(){
         $this->connection->execute("CREATE TABLE `counterskins`.`itens` 
@@ -273,8 +446,19 @@ class CreateTables{
         ) ENGINE = InnoDB;");
     }
 
-
-
-
-
+    private function createTableInventario(){
+        $this->connection->execute("CREATE TABLE `counterskins`.`inventario` 
+        (
+            `id_invetario` INT NOT NULL AUTO_INCREMENT UNIQUE,
+            `id_item` INT NOT NULL,
+            `id_usuario` INT NOT NULL,
+            `status_item` CHAR(1) NOT NULL, -- |c = comprado (item comprado do site),  t - transferido (item veio de transferecia da conta steam), r - retirado(item foi transferido para conta steam), v - vendido(item foi vendido para outro usuario)| 
+            `status_negociacao` CHAR(1) NOT NULL, -- |a - anunciado, e = estoque| 
+            `preco_compra` FLOAT(20,2),
+            `preco_venda` FLOAT(20,2),
+            PRIMARY KEY (`id_invetario`),
+            FOREIGN KEY (`id_item`) REFERENCES itens(`id_item`),
+            FOREIGN KEY (`id_usuario`) REFERENCES usuarios(`id_usuario`)
+        ) ENGINE = InnoDB;");
+    }
 }
