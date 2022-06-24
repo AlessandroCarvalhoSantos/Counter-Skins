@@ -34,13 +34,17 @@ if($sessionPage->isValidToken($_SESSION["token"]) && ($sessionPage->getType() ==
 
              //Pegar dados do item e adicionar em baixo
 
+            $valor= rand(1,9);
+            $valor = "0.0" . $valor;
+
             $pagamento = new Pagamento;
             $valores =  array(
                 "nome"=> $_SESSION['user'],
                 "nome_item"=> $item[0]['nome_item'],
-                "valor" => "0.01",
-                "cpf" => "13142985778"
+                "valor" => $valor,
             );
+
+
 
             $_SESSION['resposta'] = $pagamento->gerarQrCode($valores);
         }

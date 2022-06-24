@@ -449,14 +449,14 @@ class CreateTables{
     private function createTableInventario(){
         $this->connection->execute("CREATE TABLE `counterskins`.`inventario` 
         (
-            `id_invetario` INT NOT NULL AUTO_INCREMENT UNIQUE,
+            `id_inventario` INT NOT NULL AUTO_INCREMENT UNIQUE,
             `id_item` INT NOT NULL,
             `id_usuario` INT NOT NULL,
             `status_item` CHAR(1) NOT NULL, -- |c = comprado (item comprado do site),  t - transferido (item veio de transferecia da conta steam), r - retirado(item foi transferido para conta steam), v - vendido(item foi vendido para outro usuario)| 
             `status_negociacao` CHAR(1) NOT NULL, -- |a - anunciado, e = estoque| 
             `preco_compra` FLOAT(20,2),
             `preco_venda` FLOAT(20,2),
-            PRIMARY KEY (`id_invetario`),
+            PRIMARY KEY (`id_inventario`),
             FOREIGN KEY (`id_item`) REFERENCES itens(`id_item`),
             FOREIGN KEY (`id_usuario`) REFERENCES usuarios(`id_usuario`)
         ) ENGINE = InnoDB;");

@@ -36,6 +36,18 @@ if($sessionPage->isValidToken($_SESSION["token"]) && ($sessionPage->getType() ==
 
             //Inserir dados no banco
 
+            $connection->executeConnection();
+
+            $sql = "SELECT id_inventario FROM inventario where id_item = ".$_SESSION['codItem'];
+            $inventario =  $connection->execute($sql)->fetchAll(PDO::FETCH_ASSOC);
+
+            $sql = "UPDATE inventario SET
+            id_usuario =". $_SESSION['userId'] ."
+            WHERE id_inventario = " .$inventario[0]['id_inventario'];
+
+            $connection->execute($sql)->fetchAll(PDO::FETCH_ASSOC);
+     
+
             $pageInitial->setVariablePath("../../");
             $pageInitial->setTitlePage("Compra");
             $pageInitial->setPathPage("view/compra/");
