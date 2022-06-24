@@ -1,7 +1,7 @@
 
 
 
-<div class="card shadow text-white" style="height:630px">
+<div class="card shadow text-white" style="height:680px">
     <img  class="card-img-top" src="<?=$this->variablePath . $pathImg?>" alt="Arma de destaque">
     <div class="card-body">
         <div class="card-title fw-bold">

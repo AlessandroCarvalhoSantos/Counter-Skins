@@ -18,7 +18,32 @@
                 $pathImg = $_SESSION['inventario'][$i]['imagem_item'];
                 $id = $_SESSION['inventario'][$i]['id_item'];
                 $esgotado = $_SESSION['inventario'][$i]['estoque'] == "S"?true:false;
-                include $this->variablePath . 'view/layout/componentes/card.php';
+     
+                ?>
+
+                <div class="card shadow text-white" style="height:680px">
+                    <img  class="card-img-top" src="<?=$this->variablePath . $pathImg?>" alt="Arma de destaque">
+                    <div class="card-body">
+                        <div class="card-title fw-bold">
+                            <?=$titulo?>
+                        </div>
+                        <div class="card-text lead" style="font-size:13pt;">
+                          <?=$descricao?>
+                        </div>
+                    </div>
+    
+                    <div class="card-footer d-flex justify-content-center mb-2">
+                        <form method="POST">
+                          
+                          <input type="hidden" name="codItem" value="<?=$id?>">
+    
+                          <button type="submit" formaction="<?=$this->variablePath. "controller/venda/venda.php"?>" class="btn btn-outline-warning fw-bold px-4 me-1">Vender</button>
+                          <button type="submit" formaction="<?=$this->variablePath. "controller/compra/resgaste.php"?>" class="btn btn-outline-success fw-bold px-3">Resgatar</button>
+                        </form>
+                    </div>
+                </div>
+    
+    <?php
             echo '</div>';
         }
         echo '</div>';

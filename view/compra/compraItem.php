@@ -43,8 +43,8 @@
                 </div>
 
                 <div class="col-12">
-                    <h2 class="text-center  fs-cs text-warning">Teste</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex blanditiis inventore !</p>
+                    <h2 class="text-center  fs-cs text-warning">Preço atual</h2>
+                    <p>R$0.01 - R$0.09</p>
                 </div>
 
                 <?=$erro;?>
