@@ -9,11 +9,16 @@ class ComposerStaticInit4542a952d3f9df8d307f5109b8cf4d64
     public static $prefixLengthsPsr4 = array (
         'M' => 
         array (
+            'Mpdf\\QrCode\\' => 12,
             'Model\\' => 6,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Mpdf\\QrCode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mpdf/qrcode/src',
+        ),
         'Model\\' => 
         array (
             0 => __DIR__ . '/../..' . '/model',

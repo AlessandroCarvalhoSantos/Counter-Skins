@@ -18,14 +18,7 @@ $tables = new CreateTables();
 $tables->verifyTables();
 
 
-
-$pageInitial->setVariablePath("");
-$pageInitial->setTitlePage("Home");
-$pageInitial->setPathPage("view/home/");
-$pageInitial->setNamePage("home", "php");
-$pageInitial->execute();
-
-
-
+header("location: ./controller/home/home.php");
+exit();
 
 ?>

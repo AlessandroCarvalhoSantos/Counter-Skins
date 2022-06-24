@@ -15,7 +15,7 @@ class ConnectionMySql{
   const HOST = 'localhost';
   const NAME = 'counterskins';
   const USER = 'admin';
-  const PASS = '';
+  const PASS = 'admin147';
 
 
   private $table; //Nome da tabela

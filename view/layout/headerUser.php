@@ -79,6 +79,7 @@
                             <ul class="dropdown-menu dropdown-menu-dark " aria-labelledby="navbarDropdownMenuLink">
                                 <li><a class="dropdown-item" href="<?=$this->variablePath."controller/conta/conta.php"?>">Conta</a></li>
                                 <li><a class="dropdown-item" href="<?=$this->variablePath."controller/carteira/carteira.php"?>">Carteira</a></li>
+                                <li><a class="dropdown-item" href="<?=$this->variablePath."controller/inventario/inventario.php"?>">Inventário</a></li>
                                 <li><a class="dropdown-item" href="<?=$this->variablePath."controller/login/login.php"?>">Sair</a></li>
                             </ul>
                         </div>

@@ -1,8 +1,11 @@
-<section class="container py-5">
+
+<section class="container-fluid bg-itens py-5">
+  <div class="container">
+
 
     <div class="row">
       <div class="col pb-4 text-center">
-        <h1 class="fw-bold"> Destaques do mercado</h1>
+        <h1 class="fw-bold text-light "> Destaques do mercado</h1>
       </div>
     </div>
 
@@ -13,12 +16,15 @@
             echo '<div class="col">';
                 $descricao = $_SESSION['itens'][$i]['descricao_item'];
                 $titulo = $_SESSION['itens'][$i]['nome_item'];
-                $pathImg = $_SESSION['itens'][$i]['imagem_item'];;
+                $pathImg = $_SESSION['itens'][$i]['imagem_item'];
+                $id = $_SESSION['itens'][$i]['id_item'];
+                $esgotado = $_SESSION['itens'][$i]['estoque'] == "S"?true:false;
                 include $this->variablePath . 'view/layout/componentes/card.php';
             echo '</div>';
         }
     ?>
    
     </div>
+  </div>
 
 </section>

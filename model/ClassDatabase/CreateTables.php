@@ -31,66 +31,7 @@ class CreateTables{
 
     }
 
-    private function insertUF(){
-
-
-        $uf = array(
-            "RO"=>"Rondônia",	
-            "AC"=>"Acre",	
-            "AM"=>"Amazonas",	
-            "RR"=>"Roraima",
-            "PA"=>"Pará",	
-            "AP"=>"Amapá",	
-            "TO"=>"Tocantins",
-            "MA"=>"Maranhão",
-            "PI"=>"Piauí",
-            "CE"=>"Ceará",
-            "RN"=>"Rio Grande do Norte",
-            "PB"=>"Paraíba",
-            "PE"=>"Pernambuco",
-            "AL"=>"Alagoas",
-            "SE"=>"Sergipe",
-            "BA"=>"Bahia",
-            "MG"=>"Minas Gerais",
-            "ES"=>"Espírito Santo",
-            "RJ"=>"Rio de Janeiro",
-            "SP"=>"São Paulo",
-            "PR"=>"Paraná",
-            "SC"=>"Santa Catarina",
-            "RS"=>"Rio Grande do Sul",
-            "MS"=>"Mato Grosso do Sul",
-            "MT"=>"Mato Grosso",
-            "GO"=>"Goiás",
-            "DF"=>"Distrito Federal"	
-        );
-
-        foreach($uf as $key=>$value){
-            $sql ="INSERT INTO `estados`(`ufSigla`, `ufNome`) VALUES ('$key','$value')";
-            $this->connection->execute($sql);
-        }
-
-    }
-
-    private function insertTelefones(){
-
-     
-        $dados = array(
-            "id_pessoa"=> $this->id,
-            "telefone"=> "28999762587"
-        );
-
-        $this->connection->setTable('telefones');
-        $this->connection->insert($dados);
-
-        $dados = array(
-            "id_pessoa"=> $this->id,
-            "telefone"=> "28999298577"
-        );
-
-        $this->connection->setTable('telefones');
-        $this->connection->insert($dados);
-    }
-
+  
     private function insertUsuarios(){
 
         $encrypt = new EncryptDecrypt();
@@ -125,6 +66,7 @@ class CreateTables{
             "tipo_item" => "AK-47",
             "tipo_desgaste" => "Factory New",
             "desgaste_item" => 0.06328179,
+            "estoque" => "S",
             "imagem_item" => "assets\img\itensCS\armas\ak-47\A202201\A1.png"
         );
         $this->connection->insert($dados);
@@ -136,6 +78,7 @@ class CreateTables{
             "tipo_item" => "AWP",
             "tipo_desgaste" => "Factory New",
             "desgaste_item" => 0.02265622,
+            "estoque" => "S",
             "imagem_item" => "assets\img\itensCS\armas\awp\A202201\A1.png"
         );
         $this->connection->insert($dados);
@@ -147,6 +90,7 @@ class CreateTables{
             "tipo_item" => "M4A1-S",
             "tipo_desgaste" => "Minimal Wear",
             "desgaste_item" => 0.08840039,
+            "estoque" => "N",
             "imagem_item" => "assets\img\itensCS\armas\M4A1-S\A202201\A1.png"
         );
         $this->connection->insert($dados);
@@ -158,6 +102,7 @@ class CreateTables{
             "tipo_item" => "USP-S",
             "tipo_desgaste" => "Factory New",
             "desgaste_item" => 0.06995636,
+            "estoque" => "N",
             "imagem_item" => "assets\img\itensCS\armas\USP-S\A202201\A1.png"
         );
         $this->connection->insert($dados);
@@ -169,6 +114,7 @@ class CreateTables{
             "tipo_item" => "Glock-18",
             "tipo_desgaste" => "Factory New",
             "desgaste_item" => 0.01092004,
+            "estoque" => "S",
             "imagem_item" => "assets\img\itensCS\armas\Glock-18\A202201\A1.png"
         );
         $this->connection->insert($dados);
@@ -180,6 +126,7 @@ class CreateTables{
             "tipo_item" => "Karambit",
             "tipo_desgaste" => "Battle-Scarred",
             "desgaste_item" => 0.57779365,
+            "estoque" => "S",
             "imagem_item" => "assets\img\itensCS\knives\Karambit\A202201\A1.png"
         );
         $this->connection->insert($dados);
@@ -191,6 +138,7 @@ class CreateTables{
             "tipo_item" => "Butterfly Knife",
             "tipo_desgaste" => "Factory New",
             "desgaste_item" => 0.00932433,
+            "estoque" => "S",
             "imagem_item" => "assets\img\itensCS\knives\Butterfly-Knife\A202201\A1.png"
         );
         $this->connection->insert($dados);
@@ -202,6 +150,7 @@ class CreateTables{
             "tipo_item" => "Specialist Gloves",
             "tipo_desgaste" => "Factory New",
             "desgaste_item" => 0.06920338,
+            "estoque" => "S",
             "imagem_item" => "assets\img\itensCS\luvas\Specialist-Gloves\A202201\A1.png"
         );
         $this->connection->insert($dados);
@@ -213,6 +162,7 @@ class CreateTables{
             "tipo_item" => "Sport Gloves",
             "tipo_desgaste" => "Field-Tested",
             "desgaste_item" => 0.21971058,
+            "estoque" => "S",
             "imagem_item" => "assets\img\itensCS\luvas\Sport-Gloves\A202201\A1.png"
         );
         $this->connection->insert($dados);
@@ -224,6 +174,7 @@ class CreateTables{
             "tipo_item" => "P90",
             "tipo_desgaste" => "Factory New",
             "desgaste_item" => 0.01694127,
+            "estoque" => "S",
             "imagem_item" => "assets\img\itensCS\armas\P90\A202201\A1.png"
         );
         $this->connection->insert($dados);
@@ -235,6 +186,7 @@ class CreateTables{
             "tipo_item" => "Desert Eagle",
             "tipo_desgaste" => "Factory New",
             "desgaste_item" => 0.02757455,
+            "estoque" => "S",
             "imagem_item" => "assets\img\itensCS\armas\Desert-Eagle\A202201\A1.png"
         );
         $this->connection->insert($dados);
@@ -246,6 +198,7 @@ class CreateTables{
             "tipo_item" => "Desert Eagle",
             "tipo_desgaste" => "Factory New",
             "desgaste_item" => 0.05637090,
+            "estoque" => "S",
             "imagem_item" => "assets\img\itensCS\armas\Desert-Eagle\A202201\A2.png"
         );
         $this->connection->insert($dados);
@@ -257,6 +210,7 @@ class CreateTables{
             "tipo_item" => "M4A4",
             "tipo_desgaste" => "Well-Worn",
             "desgaste_item" => 0.38539847,
+            "estoque" => "S",
             "imagem_item" => "assets\img\itensCS\armas\M4A4\A202201\A1.png"
         );
         $this->connection->insert($dados);
@@ -268,6 +222,7 @@ class CreateTables{
             "tipo_item" => "M4A4",
             "tipo_desgaste" => "Field-Tested",
             "desgaste_item" => 0.28366786,
+            "estoque" => "S",
             "imagem_item" => "assets\img\itensCS\armas\M4A4\A202201\A2.png"
         );
         $this->connection->insert($dados);
@@ -279,6 +234,7 @@ class CreateTables{
             "tipo_item" => "P250",
             "tipo_desgaste" => "Factory New",
             "desgaste_item" => 0.06994196,
+            "estoque" => "S",
             "imagem_item" => "assets\img\itensCS\armas\P250\A202201\A1.png"
         );
         $this->connection->insert($dados);
@@ -307,49 +263,18 @@ class CreateTables{
         (`id_item` INT NOT NULL AUTO_INCREMENT UNIQUE , 
         `nome_item` VARCHAR(70) NOT NULL , 
         `nome_colecao` VARCHAR(80) NOT NULL,
-        `descricao_item` VARCHAR(300) NOT NULL,
+        `descricao_item` VARCHAR(800) NOT NULL,
         `tipo_item` VARCHAR(30) NOT NULL,
         `tipo_desgaste` VARCHAR(30) NOT NULL,
         `desgaste_item` FLOAT(15,12) NOT NULL,
-        `imagem_item` VARCHAR(50) NOT NULL,
+        `imagem_item` VARCHAR(100) NOT NULL,
+        `estoque` CHAR(1) NOT NULL,
         PRIMARY KEY (`id_item`)
         ) ENGINE = InnoDB;");
     }
 
 
-    
 
-    private function createTableTelefone(){
-        $this->connection->execute("CREATE TABLE `webdec`.`telefones` 
-        (`id` INT NOT NULL AUTO_INCREMENT , 
-        `id_pessoa` INT NOT NULL , 
-        `telefone` VARCHAR(20) NOT NULL , 
-        CONSTRAINT FK_TelefonePessoa FOREIGN KEY (`id_pessoa`)
-        REFERENCES pessoas(`id`),
-        PRIMARY KEY (`id`)) ENGINE = InnoDB;");
-    }
-
-    private function createTableEstados(){
-        $this->connection->execute("
-        CREATE TABLE `webdec`.`estados` 
-            (`id` INT NOT NULL AUTO_INCREMENT ,
-            `ufSigla` CHAR(2) NOT NULL , 
-            `ufNome` VARCHAR(30) NOT NULL , 
-            PRIMARY KEY (`id`)) ENGINE = InnoDB;");
-    }
-
-    private function createTableEnderecos(){
-        $this->connection->execute("CREATE TABLE `webdec`.`enderecos` 
-        (`id` INT NOT NULL AUTO_INCREMENT , 
-        `estado_id` INT NOT NULL , 
-        `cep` VARCHAR(8) NOT NULL , 
-        `endereco` VARCHAR(150) NOT NULL , 
-        `numero` INT NOT NULL , 
-        PRIMARY KEY (`id`),
-        CONSTRAINT FK_EnderecoEstado FOREIGN KEY (`estado_id`)
-        REFERENCES estados(`id`)
-        ) ENGINE = InnoDB;");
-    }
 
 
 }

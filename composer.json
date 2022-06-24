@@ -1,7 +1,10 @@
 {
     "name":"desafio/crud",
     "require": {
-        "dg/mysql-dump": "^1.5"
+        "dg/mysql-dump": "^1.5",
+        "mpdf/qrcode": "^1.2"
+        
+       
     },
 
     "autoload": {

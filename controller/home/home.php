@@ -15,12 +15,8 @@ $sessionPage->initializeSession();
 
 $connection->executeConnection();
 
-$sql = "SELECT * FROM itens LIMIT 6";
+$sql = "SELECT * FROM itens ORDER BY RAND() LIMIT 6";
 $_SESSION['itens'] =  $connection->execute($sql)->fetchAll(PDO::FETCH_ASSOC);
-
-// echo '<pre>';
-// print_r($_SESSION['itens'] );
-// echo '</pre>';
 
 $pageInitial->setVariablePath("../../");
 $pageInitial->setTitlePage("Home");
