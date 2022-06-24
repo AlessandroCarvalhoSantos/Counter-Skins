@@ -26,12 +26,18 @@ if($sessionPage->isValidToken($_SESSION["token"]) && ($sessionPage->getType() ==
 
             $_SESSION['codItem'] = $_POST['codItem'];
 
-            //Pegar dados do item e adicionar em baixo
+            
+            $connection->executeConnection();
+
+            $sql = "SELECT * FROM itens where id_item = ".$_SESSION['codItem'];
+            $item =  $connection->execute($sql)->fetchAll(PDO::FETCH_ASSOC);
+
+             //Pegar dados do item e adicionar em baixo
 
             $pagamento = new Pagamento;
             $valores =  array(
-                "nome"=> "Alessandro",
-                "nome_item"=> "Glock-18 | Fade",
+                "nome"=> $_SESSION['user'],
+                "nome_item"=> $item[0]['nome_item'],
                 "valor" => "0.01",
                 "cpf" => "13142985778"
             );

@@ -27,10 +27,6 @@ class Pagamento{
                 'calendario' => [
                 'expiracao' => 300
             ],
-                'devedor' => [
-                'cpf' => $valores['cpf'],
-                'nome' => $valores['nome']
-            ],
                 'valor' => [
                 'original' => $valores['valor']
             ],

@@ -6,7 +6,7 @@
       if(!empty($_SESSION['inventario'])){
         echo ' <div class="row">
                   <div class="col pb-4 text-center">
-                    <h1 class="fw-bold text-light pb-2 bb-1"> Inventário pessoal</h1>
+                    <h1 class="fw-bold text-light pb-2 bb-1 mt-5"> Inventário pessoal</h1>
                   </div>
                 </div>';
 
